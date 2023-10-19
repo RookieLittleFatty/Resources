@@ -1,0 +1,14 @@
+Git and SourceTree config:
+
+Git ssh
+1. install git;
+2. Generate SSH key with the command: ssh-keygen -t rsa -b 4096 -C "your email@domain.com"; 
+3. 1) log in to your GitHub website, go to settings to find ssh settings, and click to add or new ssh key;
+   2) find the ssh public key generated before in your machine, usually, the default path of ssh fold is C:\Users\your username\.ssh
+   3) copy content of id_rsa.pub, paste in the website and add;
+
+SourceTree Config:
+1. install SourceTree,
+2. select tool => options in the top menu;
+3. Change the SSH Client Configuration => SSH Client from "Putty..." to "OpenSSH", the SSH key will fill the default file path of the private SSH key. if not, choose the right path.
+4. Clone a repo with an SSH address.
