@@ -12,3 +12,10 @@ SourceTree Config:
 2. select tool => options in the top menu;
 3. Change the SSH Client Configuration => SSH Client from "Putty..." to "OpenSSH", the SSH key will fill the default file path of the private SSH key. if not, choose the right path.
 4. Clone a repo with an SSH address.
+
+
+Pull code from git and open it in VSCode， Open a file， and a red error is displayed at the end of every line. it shows some error about "cr".
+
+it is a problem with "CRLF" and "lf". In the right bottom of the editor, it shows "CRLF"(for window), click and change it to "lf", and the errors disappear. it is because the code pulled from git ends with "lf". 
+but the window changes it to CRLF and the Prettier or Eslint checks it as an error.
+resolution: set git config with command "git config --global core.autocrlf false" in gitbash. then, clone and pull the repo again.
